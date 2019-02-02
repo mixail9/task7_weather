@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?attr/colorPrimaryDark"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                tools:layout_editor_absoluteY="4dp"
+                tools:layout_editor_absoluteX="16dp">
+
+
+            <Spinner
+                    android:id="@+id/citySelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/city_selector"
+                    android:layout_marginEnd="100dp"
+                    android:spinnerMode="dialog"
+            />
+
+            <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:textAlignment="textEnd"
+                    android:elevation="10dp"
+                    app:srcCompat="@drawable/icons8synchronize96" android:id="@+id/btnRefreshCustom"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+        <fragment
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:name="com.example.myapplication.ListFragment"
+                android:id="@+id/frList1"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/frList2"
+        />
+
+        <fragment
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:name="com.example.myapplication.ListFragment"
+                android:id="@+id/frList2"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintLeft_toRightOf="@+id/frList1"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

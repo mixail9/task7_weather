@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <integer-array name="city_selector_id">
+        <item id="kld">24</item>
+        <item id="orel">45</item>
+        <item id="tula">66</item>
+    </integer-array>
+
+    <string-array name="city_selector">
+        <item>Kaliningrad</item>
+        <item>Orel</item>
+        <item>Tula</item>
+    </string-array>
+</resources>
